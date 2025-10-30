@@ -2,11 +2,13 @@
   "name": "n8n-render-app",
   "version": "1.0.0",
   "main": "server.js",
-  "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "n8n"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "n8n": "^1.63.0"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
