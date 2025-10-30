@@ -1,17 +1,12 @@
 {
-  "name": "n8n-render-app",
+  "name": "n8n-render",
   "version": "1.0.0",
-  "description": "Run n8n on Render Free Tier",
+  "description": "Self-hosted n8n instance on Render",
   "main": "server.js",
-  "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "n8n start --port $PORT"
   },
   "dependencies": {
-    "express": "^4.19.2",
-    "n8n": "^1.50.0"
-  },
-  "engines": {
-    "node": ">=18.x"
+    "n8n": "^1.68.1"
   }
 }
