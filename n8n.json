@@ -1,14 +1,12 @@
 {
-  "name": "n8n-render-deploy",
+  "name": "n8n-on-render",
   "version": "1.0.0",
-  "description": "Lightweight n8n setup for Render",
+  "description": "Free n8n instance on Render",
+  "main": "server.js",
   "scripts": {
     "start": "n8n start"
   },
   "dependencies": {
-    "n8n": "^1.60.0"
-  },
-  "engines": {
-    "node": ">=18.0.0"
+    "n8n": "^1.38.0"
   }
 }
