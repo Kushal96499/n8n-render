@@ -6,9 +6,6 @@
     "start": "n8n"
   },
   "dependencies": {
-    "n8n": "^1.63.0"
-  },
-  "engines": {
-    "node": "18.x"
+    "n8n": "^1.64.0"
   }
 }
