@@ -1,21 +1,23 @@
-const express = require('express');
-const { exec } = require('child_process');
+import express from "express";
+import { exec } from "child_process";
+
 const app = express();
-const port = process.env.PORT || 10000;
+const PORT = process.env.PORT || 5678;
 
-app.get('/', (req, res) => {
-  res.send('🚀 n8n server is starting...');
-});
-
-// Start n8n in background
-exec('n8n start', (err, stdout, stderr) => {
+// Run n8n
+exec(`npx n8n start --tunnel`, (err, stdout, stderr) => {
   if (err) {
-    console.error('❌ n8n failed to start:', err);
+    console.error(`n8n failed: ${err.message}`);
     return;
   }
-  console.log('✅ n8n started successfully');
+  console.log(stdout);
+  console.error(stderr);
 });
 
-app.listen(port, () => {
-  console.log(`🌍 Server running on port ${port}`);
+app.get("/", (req, res) => {
+  res.send("✅ n8n Render Server is running!");
+});
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🌐 Server running on port ${PORT}`);
 });
